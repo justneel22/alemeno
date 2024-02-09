@@ -25,56 +25,58 @@ function Dashboard() {
         const progressBarWidth = course.completed ? "100%" : "50%";
 
         const courseCard = (
-          <div key={index} className="course-card">
-            <div className="card my-5 p-5">
-              <img
-                src={course.thumbnailUrl}
-                alt="thumbnail"
-                className="card-img-top"
-                style={{ height: "100px", width: "100px" }}
-              />
-              <p>Course Name: {course.name}</p>
-              <p>Instructor Name: {course.instructor}</p>
-              {!course.completed && (
-                <p id="DueDate">Due Date: {course.dueDate}</p>
-              )}
-              <p>Course Progress: {course.completed ? "Completed" : "50%"}</p>
-              {!course.completed && (
-                <div
-                  id="ProgressBar"
-                  className="progress"
-                  style={{ height: "5px" }}
-                >
+          <div key={index} className="course-card ">
+            <Link to={`/details/${course.id}`} style={{ textDecoration: 'none' }} className="text-dark">
+              <div className="card my-5 p-5">
+                <img
+                  src={course.thumbnailUrl}
+                  alt="thumbnail"
+                  className="card-img-top"
+                  style={{ height: "100px", width: "100px" }}
+                />
+                <p>Course Name: {course.name}</p>
+                <p>Instructor Name: {course.instructor}</p>
+                {!course.completed && (
+                  <p id="DueDate">Due Date: {course.dueDate}</p>
+                )}
+                <p>Course Progress: {course.completed ? "Completed" : "50%"}</p>
+                {!course.completed && (
                   <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: progressBarWidth }}
-                    aria-valuenow="50"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              )}
-              {!course.completed ? (
-                <span>
-                  <input
-                    type="checkbox"
+                    id="ProgressBar"
+                    className="progress"
+                    style={{ height: "5px" }}
+                  >
+                    <div
+                      className="progress-bar"
+                      role="progressbar"
+                      style={{ width: progressBarWidth }}
+                      aria-valuenow="50"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                )}
+                {!course.completed ? (
+                  <span>
+                    <input
+                      type="checkbox"
+                      checked={course.completed}
+                      onChange={() => handleCheckboxChange(index)}
+                    />
+                    <label className="px-3">Mark course as completed</label>
+                  </span>
+                ) : (
+                  <button
+                    type="button"
+                    className="btn btn-primary"
                     checked={course.completed}
-                    onChange={() => handleCheckboxChange(index)}
-                  />
-                  <label className="px-3">Mark course as completed</label>
-                </span>
-              ) : (
-                <button
-                  type="button"
-                  className="btn btn-primary"
-                  checked={course.completed}
-                  onClick={() => handleCheckboxChange(index)}
-                >
-                  Continue where you left off
-                </button>
-              )}
-            </div>
+                    onClick={() => handleCheckboxChange(index)}
+                  >
+                    Continue where you left off
+                  </button>
+                )}
+              </div>
+            </Link>
           </div>
         );
 

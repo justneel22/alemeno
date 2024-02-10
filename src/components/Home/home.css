@@ -1,0 +1,40 @@
+.custom-card-title {
+  font-size: 18px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-transform: capitalize;
+}
+
+.custom-card {
+  border-radius: 10px;
+  background-color: #fff;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+
+.custom-card:hover {
+  transform: scale(1.02);
+  transition: all ease-in-out 200ms;
+}
+
+.custom-card-img-top {
+  border-radius: 10px 10px 0 0;
+}
+
+.search-input {
+    border: none; /* Remove any border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    transition: box-shadow 0.3s ease; /* Add transition for smoother effect */
+  }
+  
+  .search-input:focus {
+    outline: none; /* Remove default outline on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust shadow properties on focus */
+  }
+  

@@ -1,0 +1,49 @@
+/* For making the accordion headers more appealing */
+.accordion-header button {
+    color: #333;
+    background-color: #f8f9fa;
+    border: none;
+  }
+  
+  /* For reducing the padding of accordion body */
+  .accordion-body {
+    padding: 1rem;
+  }
+  
+  /* For adding a subtle border and shadow around the accordion */
+  .accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+    z-index: 1;
+  }
+  
+  .position-absolute {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  table{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  th,td{
+    padding: 16px!important;
+  }
+   .header-container{
+    left:0;
+    right:0;
+  
+    margin-left: auto;
+    margin-right: auto;
+   }

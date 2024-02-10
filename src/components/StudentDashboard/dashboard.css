@@ -1,0 +1,11 @@
+.link-custom {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-custom {
+  border-radius: 10px;
+  background-color: #fff;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
